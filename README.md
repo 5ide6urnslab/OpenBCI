@@ -5,12 +5,12 @@ This repository is the Debugging for the OpenBCI that runs on Openframeworks.
 ##### ReceiveOpenBCI
 This ReceiveOpenBCI is the Openframeworks Application for Debugging the OpenBCI. This Application is received the EEG data x 8ch and Acceleration(x, y, z) data from OpenBCI.
 
-<img class="photo" src="https://github.com/5ide6urnslab/OpenBCI/tree/master/Resource/ReceiveOpenBCI.png" width="340px" />
+<img class="photo" src="https://github.com/5ide6urnslab/OpenBCI/blob/master/Resource/ReceiveOpenBCI.png" width="340px" />
 
 ##### PlaybackLog
 This PlaybackLog is the Openframeworks Application for OpenBCI. This Application is played the OpenBCI log and send the EEG data x 8ch by OSC.
 
-<img class="photo" src="https://github.com/5ide6urnslab/OpenBCI/tree/master/Resource/PlayBack.png" width="340px" />
+<img class="photo" src="https://github.com/5ide6urnslab/OpenBCI/blob/master/Resource/PlayBack.png" width="340px" />
 
 ## Installation
 (1) To use the above application, first you need to download and install  
