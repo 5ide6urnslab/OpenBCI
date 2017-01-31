@@ -1,5 +1,5 @@
 # OpenBCI
-This repository is the Debugging for the OpenBCI that runs on Openframeworks. 
+This repository is the Debugging for the OpenBCI that runs on Openframeworks v0.80. 
 
 ## Description
 ##### ReceiveOpenBCI
@@ -23,7 +23,7 @@ https://github.com/5ide6urnslab/OpenBCI/Application
 (1) OpenBCI  
 http://docs.openbci.com/Getting%20Started/00-Welcome
 
-(2) openframeworks  
+(2) openframeworks v0.80  
 http://openframeworks.cc
 
 ## Copyright
