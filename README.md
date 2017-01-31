@@ -1,6 +1,8 @@
 # OpenBCI
 This repository is the Debugging for the OpenBCI that runs on Openframeworks v0.80. 
 
+<img class="photo" src="https://github.com/5ide6urnslab/OpenBCI/blob/master/Resource/System.png" width="600px" />
+
 ## Description
 ##### ReceiveOpenBCI
 This ReceiveOpenBCI is the Openframeworks Application for Debugging the OpenBCI. This Application is received the EEG data x 8ch and Acceleration(x, y, z) data from OpenBCI.
