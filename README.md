@@ -7,6 +7,7 @@ This ReceiveOpenBCI is the Openframeworks Application for Debugging the OpenBCI.
 
 <img class="photo" src="https://github.com/5ide6urnslab/OpenBCI/blob/master/Resource/ReceiveOpenBCI.png" width="340px" />
 
+<br>
 ##### PlaybackLog
 This PlaybackLog is the Openframeworks Application for OpenBCI. This Application is played the OpenBCI log and send the EEG data x 8ch by OSC.
 
