@@ -174,21 +174,16 @@ void testApp::draw(){
     
     _gui.draw();
     
-	reportStr << " EEG 1ch: " << _eeg[0] << endl;
-	reportStr << " EEG 2ch: " << _eeg[1] << endl;
-	reportStr << " EEG 3ch: " << _eeg[2] << endl;
-	reportStr << " EEG 4ch: " << _eeg[3] << endl;
-	reportStr << " EEG 5ch: " << _eeg[4] << endl;
-	reportStr << " EEG 6ch: " << _eeg[5] << endl;
-	reportStr << " EEG 7ch: " << _eeg[6] << endl;
-	reportStr << " EEG 8ch: " << _eeg[7] << endl;
-    
+    for(unsigned int i = 0; i < 8; ++i){
+        reportStr << " EEG " << (i + 1) << "ch: " << _eeg[i] << endl;
+    }
+
     reportStr << "          " << endl;
-    
-    reportStr << " Accel X: " << _accel[0] << endl;
-    reportStr << " Accel Y: " << _accel[1] << endl;
-    reportStr << " Accel Z: " << _accel[2] << endl;
-    
+  
+    for(unsigned int i = 0; i < 3; ++i){
+        reportStr << " Accel X: " << _accel[i] << endl;
+    }
+
     ofDrawBitmapString(reportStr.str(), 20, 250);
     
     return;

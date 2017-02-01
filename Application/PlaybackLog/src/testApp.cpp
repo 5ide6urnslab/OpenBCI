@@ -60,46 +60,13 @@ void testApp::onPlaybackPushed(bool &value){
  **********************************************************************/
 void testApp::sendOsc(){
     
-    _m.setAddress(DEF_OSC_MSG_CH1);
-    _m.addIntArg(_ch[0]);
-    _b.addMessage(_m);
-    _m.clear();
+    for(unsigned int i = 0; i < 8; ++i){
+        _m.setAddress(_oscMsgTable[i]);
+        _m.addIntArg(_ch[i]);
+        _b.addMessage(_m);
+        _m.clear();
+    }
     
-    _m.setAddress(DEF_OSC_MSG_CH2);
-    _m.addIntArg(_ch[1]);
-    _b.addMessage(_m);
-    _m.clear();
-    
-    _m.setAddress(DEF_OSC_MSG_CH3);
-    _m.addFloatArg(_ch[2]);
-    _b.addMessage(_m);
-    _m.clear();
-
-    _m.setAddress(DEF_OSC_MSG_CH4);
-    _m.addFloatArg(_ch[3]);
-    _b.addMessage(_m);
-    _m.clear();
-
-    _m.setAddress(DEF_OSC_MSG_CH5);
-    _m.addFloatArg(_ch[4]);
-    _b.addMessage(_m);
-    _m.clear();
-
-    _m.setAddress(DEF_OSC_MSG_CH6);
-    _m.addFloatArg(_ch[5]);
-    _b.addMessage(_m);
-    _m.clear();
-
-    _m.setAddress(DEF_OSC_MSG_CH7);
-    _m.addFloatArg(_ch[6]);
-    _b.addMessage(_m);
-    _m.clear();
-
-    _m.setAddress(DEF_OSC_MSG_CH8);
-    _m.addFloatArg(_ch[7]);
-    _b.addMessage(_m);
-    _m.clear();
-
     _sender.sendBundle(_b);
     _b.clear();
 
@@ -164,7 +131,8 @@ void testApp::setup(){
  *  @param[in]  void
  *  @return     void
  *  @version    v1.00
- *  @date       01/19/2017 v1.00 Create On. **********************************************************************/
+ *  @date       01/19/2017 v1.00 Create On.
+ **********************************************************************/
 void testApp::update(){
     
     ofSetFrameRate(_framerate);
@@ -197,17 +165,13 @@ void testApp::draw(){
     
     reportStr_ << " FPS:     " << ofGetFrameRate() << endl;
     reportStr_ << "          " << endl;
-    reportStr_ << " EEG Ch1: " << _ch[0] << endl;
-    reportStr_ << " EEG Ch2: " << _ch[1] << endl;
-    reportStr_ << " EEG Ch3: " << _ch[2] << endl;
-    reportStr_ << " EEG Ch4: " << _ch[3] << endl;
-    reportStr_ << " EEG Ch5: " << _ch[4] << endl;
-    reportStr_ << " EEG Ch6: " << _ch[5] << endl;
-    reportStr_ << " EEG Ch7: " << _ch[6] << endl;
-    reportStr_ << " EEG Ch8: " << _ch[7] << endl;
     
+    for(unsigned int i = 0; i < 8; ++i){
+        reportStr_ << " EEG Ch" << (i + 1) << ": " << _ch[i] << endl;
+    }
+
     ofDrawBitmapString(reportStr_.str(), 1, 150);
-    
+
     return;
 }
 

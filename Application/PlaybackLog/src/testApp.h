@@ -83,5 +83,11 @@ class testApp : public ofBaseApp{
     ofxIntSlider    _framerate;
     bool            _isPlayback;
     
+    string _oscMsgTable[8] = {
+        DEF_OSC_MSG_CH1, DEF_OSC_MSG_CH2, DEF_OSC_MSG_CH3, DEF_OSC_MSG_CH4,
+        DEF_OSC_MSG_CH5, DEF_OSC_MSG_CH6, DEF_OSC_MSG_CH7, DEF_OSC_MSG_CH8
+    };
+
+
 
 };
