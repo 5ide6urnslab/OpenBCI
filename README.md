@@ -20,7 +20,7 @@ This PlaybackLog is the Openframeworks Application for OpenBCI. This Application
 http://openframeworks.cc
 
 (2) To get a copy of the repository you can download the source from  
-https://github.com/5ide6urnslab/OpenBCI/Application
+https://github.com/5ide6urnslab/OpenBCI/blob/master/Application
 
 (3) If you use the ReceiveOpenBCI application, you have to change the Serial Port Name for a your serial device.
 
