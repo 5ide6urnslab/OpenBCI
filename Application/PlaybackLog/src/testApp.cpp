@@ -60,7 +60,7 @@ void testApp::onPlaybackPushed(bool &value){
  **********************************************************************/
 void testApp::sendOsc(){
     
-    for(unsigned int i = 0; i < 8; ++i){
+    for(unsigned int i = 0; i < DEF_SENSOR_EEG_CH_TOTAL; ++i){
         _m.setAddress(_oscMsgTable[i]);
         _m.addIntArg(_ch[i]);
         _b.addMessage(_m);
@@ -86,7 +86,7 @@ void testApp::loadCsv(){
     
     if(_count > _csv.numRows) _count = 1;
     
-    for(unsigned int i = 0; i < 8; ++i){
+    for(unsigned int i = 0; i < DEF_SENSOR_EEG_CH_TOTAL; ++i){
         _ch[i] = _csv.getInt(_count, i + 1);
     }
     
@@ -110,7 +110,7 @@ void testApp::setup(){
     ofBackground(ofColor::black);
     
     _count = 1;
-    for(int i = 0; i < 8; ++i) _ch[i] = 0;
+    for(int i = 0; i < DEF_SENSOR_EEG_CH_TOTAL; ++i) _ch[i] = 0;
     
     _sender.setup(DEF_OSC_HOST, DEF_OSC_PORT);
     
@@ -142,7 +142,7 @@ void testApp::update(){
     }
     else{
         _count = 1;
-        for(int i = 0; i < 8; ++i) _ch[i] = 0;
+        for(int i = 0; i < DEF_SENSOR_EEG_CH_TOTAL; ++i) _ch[i] = 0;
     }
     
     return;
@@ -166,7 +166,7 @@ void testApp::draw(){
     reportStr_ << " FPS:     " << ofGetFrameRate() << endl;
     reportStr_ << "          " << endl;
     
-    for(unsigned int i = 0; i < 8; ++i){
+    for(unsigned int i = 0; i < DEF_SENSOR_EEG_CH_TOTAL; ++i){
         reportStr_ << " EEG Ch" << (i + 1) << ": " << _ch[i] << endl;
     }
 

@@ -24,27 +24,28 @@
 
 using namespace wng;
 
-#define DEF_OSC_HOST           "127.0.0.1"
-#define DEF_OSC_PORT           (7777)
+#define DEF_OSC_HOST            "127.0.0.1"
+#define DEF_OSC_PORT            (7777)
 
-#define DEF_SYSTEM_DIALOG_MSG  "Please select a CSV file"
+#define DEF_SYSTEM_DIALOG_MSG   "Please select a CSV file"
 
-#define DEF_OSC_MSG_CH1        "/brain/ch/1"
-#define DEF_OSC_MSG_CH2        "/brain/ch/2"
-#define DEF_OSC_MSG_CH3        "/brain/ch/3"
-#define DEF_OSC_MSG_CH4        "/brain/ch/4"
-#define DEF_OSC_MSG_CH5        "/brain/ch/5"
-#define DEF_OSC_MSG_CH6        "/brain/ch/6"
-#define DEF_OSC_MSG_CH7        "/brain/ch/7"
-#define DEF_OSC_MSG_CH8        "/brain/ch/8"
+#define DEF_OSC_MSG_CH1         "/brain/ch/1"
+#define DEF_OSC_MSG_CH2         "/brain/ch/2"
+#define DEF_OSC_MSG_CH3         "/brain/ch/3"
+#define DEF_OSC_MSG_CH4         "/brain/ch/4"
+#define DEF_OSC_MSG_CH5         "/brain/ch/5"
+#define DEF_OSC_MSG_CH6         "/brain/ch/6"
+#define DEF_OSC_MSG_CH7         "/brain/ch/7"
+#define DEF_OSC_MSG_CH8         "/brain/ch/8"
 
-#define DEF_GUI_TITLE          "PLAYBACK LOG"
-#define DEF_GUI_BTN_PLAYBACK   "PlayBack"
-#define DEF_GUI_BTN_FPS        "FPS"
-#define DEF_GUI_FPS_INIT       (30)
-#define DEF_GUI_FPS_MIN        (1)
-#define DEF_GUI_FPS_MAX        (60)
+#define DEF_GUI_TITLE           "PLAYBACK LOG"
+#define DEF_GUI_BTN_PLAYBACK    "PlayBack"
+#define DEF_GUI_BTN_FPS         "FPS"
+#define DEF_GUI_FPS_INIT        (30)
+#define DEF_GUI_FPS_MIN         (1)
+#define DEF_GUI_FPS_MAX         (60)
 
+#define DEF_SENSOR_EEG_CH_TOTAL (8)
 
 class testApp : public ofBaseApp{
 
@@ -70,7 +71,7 @@ class testApp : public ofBaseApp{
 
     
     ofxCsv          _csv;
-    int             _ch[8];
+    int             _ch[DEF_SENSOR_EEG_CH_TOTAL];
     int
     unsigned short  _count;
     
@@ -83,7 +84,7 @@ class testApp : public ofBaseApp{
     ofxIntSlider    _framerate;
     bool            _isPlayback;
     
-    string _oscMsgTable[8] = {
+    string _oscMsgTable[DEF_SENSOR_EEG_CH_TOTAL] = {
         DEF_OSC_MSG_CH1, DEF_OSC_MSG_CH2, DEF_OSC_MSG_CH3, DEF_OSC_MSG_CH4,
         DEF_OSC_MSG_CH5, DEF_OSC_MSG_CH6, DEF_OSC_MSG_CH7, DEF_OSC_MSG_CH8
     };
