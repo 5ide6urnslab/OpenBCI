@@ -22,11 +22,11 @@ http://openframeworks.cc
 (2) To get a copy of the repository you can download the source from  
 https://github.com/5ide6urnslab/OpenBCI/blob/master/Application
 
-(3) If you use the ReceiveOpenBCI application, you have to change the Serial Port Name for a your serial device.
+(3) If you use the ReceiveOpenBCI application, you have to change the Serial Port Name of testApp.h.
 
 <img class="photo" src="https://github.com/5ide6urnslab/OpenBCI/blob/master/Resource/SerialPortName.png" width="340px" />
 
-(4) If you use the PlaybackLog application, you have to change the Serial Port Number for OSC communication.
+(4) If you use the PlaybackLog application, you have to change the Serial Port Number of testApp.h.
 
 <img class="photo" src="https://github.com/5ide6urnslab/OpenBCI/blob/master/Resource/SerialPortNumber.png" width="340px" />
 
