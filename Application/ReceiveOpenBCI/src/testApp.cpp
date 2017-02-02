@@ -89,8 +89,8 @@ void testApp::onWorkPushed(bool &value){
  **********************************************************************/
 void testApp::setup(){
     
-    for(unsigned int i = 0; i < 8; ++i) _eeg[i]   = 0;
-    for(unsigned int i = 0; i < 3; ++i) _accel[i] = 0;
+    for(unsigned int i = 0; i < DEF_SERIAL_PACKET_CH_TOTAL; ++i)   _eeg[i]   = 0;
+    for(unsigned int i = 0; i < DEF_SERIAL_PACKET_AXIS_TOTAL; ++i) _accel[i] = 0;
     
     ofBackground(ofColor::black);
     
@@ -146,7 +146,7 @@ void testApp::update(){
                     _eeg[i] = interpret24bitAsInt32(eegByteArray_);
                 }
 
-                // Accel x 3 (x, y, z)
+                // Accel x 3 (x, y, z).
                 for(unsigned int i = 0; i < DEF_SERIAL_PACKET_AXIS_TOTAL; ++i){
                     msb_ = _serial.readByte();
                     lsb_ = _serial.readByte();
@@ -174,13 +174,13 @@ void testApp::draw(){
     
     _gui.draw();
     
-    for(unsigned int i = 0; i < 8; ++i){
+    for(unsigned int i = 0; i < DEF_SERIAL_PACKET_CH_TOTAL; ++i){
         reportStr << " EEG " << (i + 1) << "ch: " << _eeg[i] << endl;
     }
 
     reportStr << "          " << endl;
   
-    for(unsigned int i = 0; i < 3; ++i){
+    for(unsigned int i = 0; i < DEF_SERIAL_PACKET_AXIS_TOTAL; ++i){
         reportStr << " Accel X: " << _accel[i] << endl;
     }
 

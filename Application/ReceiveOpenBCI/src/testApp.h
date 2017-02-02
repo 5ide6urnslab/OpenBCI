@@ -59,8 +59,8 @@ public:
     ofxPanel  _gui;
     ofxToggle _work;
     
-    int       _eeg[8];
-    int       _accel[3];
+    int       _eeg[DEF_SERIAL_PACKET_CH_TOTAL];
+    int       _accel[DEF_SERIAL_PACKET_AXIS_TOTAL];
     
     
 };
