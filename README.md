@@ -1,17 +1,17 @@
 # OpenBCI
-This repository is the Debugging for the OpenBCI that runs on Openframeworks v0.80. 
+This repository is the Debugging for the OpenBCI "Cyton Biosensing Board Kit (8-channel)" that runs on openFrameworks v0.80. 
 
 <img class="photo" src="https://github.com/5ide6urnslab/OpenBCI/blob/master/Resource/System.png" width="600px" />
 
 ## Description
 ##### ReceiveOpenBCI
-This ReceiveOpenBCI is the Openframeworks Application for Debugging the OpenBCI. This Application is received the EEG data x 8ch and Acceleration(x, y, z) data from OpenBCI.
+This ReceiveOpenBCI is the openFrameworks Application for Debugging the OpenBCI "Cyton Biosensing Board Kit (8-channel)". This Application is received the EEG data x 8ch and Acceleration(x, y, z) data from OpenBCI.
 
 <img class="photo" src="https://github.com/5ide6urnslab/OpenBCI/blob/master/Resource/ReceiveOpenBCI.png" width="340px" />
 
 <br>
 ##### PlaybackLog
-This PlaybackLog is the Openframeworks Application for OpenBCI. This Application is played the OpenBCI log and send the EEG data x 8ch by OSC.
+This PlaybackLog is the openFrameworks Application for OpenBCI "Cyton Biosensing Board Kit (8-channel)". This Application is played the OpenBCI log and send the EEG data x 8ch by OSC.
 
 <img class="photo" src="https://github.com/5ide6urnslab/OpenBCI/blob/master/Resource/PlayBack.png" width="340px" />
 
@@ -35,7 +35,7 @@ https://github.com/5ide6urnslab/OpenBCI/blob/master/Application
 (1) OpenBCI  
 http://docs.openbci.com/Getting%20Started/00-Welcome
 
-(2) openframeworks v0.80  
+(2) openFrameworks v0.80  
 http://openframeworks.cc
 
 ## Copyright
