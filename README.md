@@ -52,8 +52,8 @@ Released under the MIT license. http://opensource.org/licenses/mit-license.php
 ## Credit
 ##### ReceiveOpenBCI:
 
-Programmer:   Show Kawabata(5ide6urns lab) http://dum6sen5e.com    
+Programmer:   [Show Kawabata](http://cargocollective.com/dum6sen5e) (5ide6urns lab)
 
 ##### PlaybackLog:
 
-Programmer:   Show Kawabata(5ide6urns lab) http://dum6sen5e.com    
+Programmer:   [Show Kawabata](http://cargocollective.com/dum6sen5e) (5ide6urns lab)
